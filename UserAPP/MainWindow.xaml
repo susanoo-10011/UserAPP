@@ -24,8 +24,8 @@
                 <TextBlock Text="Привет вам!" FontSize="22" FontWeight="Bold" Margin="0 0 0 20" FontFamily="Calibri"/>
 
                 <Grid Margin="0 0 0 20">
-                    <Button HorizontalAlignment="Left" Content="Регистрация" FontFamily="Calibri" TextBlock.FontSize="22" FontSize="20" TextBlock.FontFamily="Calibri"/>
-                    <Button HorizontalAlignment="Right" Content="Войти" Style="{StaticResource MaterialDesignFlatButton}" FontFamily="Calibri" FontSize="20" TextBlock.FontSize="22" TextBlock.FontFamily="Calibri"/>
+                    <Button HorizontalAlignment="Left" Content="Регистрация" />
+                    <Button HorizontalAlignment="Right" Content="Войти" Style="{StaticResource MaterialDesignFlatButton}" Click="Button_Window_Auth_Click"/>
                 </Grid>
 
                 <TextBox x:Name="textBoxLogin" materialDesign:HintAssist.Hint="Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Calibri" FontSize="20" TextBlock.FontSize="22" TextBlock.FontFamily="Calibri" />
@@ -33,7 +33,7 @@
                 <PasswordBox x:Name="passBox_2" materialDesign:HintAssist.Hint="Повторите пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" FontFamily="Calibri" FontSize="20" TextBlock.FontSize="22" TextBlock.FontFamily="Calibri" />
                 <TextBox x:Name="textBoxEmail" materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Calibri" FontSize="20" TextBlock.FontSize="22" TextBlock.FontFamily="Calibri" />
                 <!-- Подсказка-->
-                <Button Content="Зарегистрироваться"  Margin="0 20" Click="Button_Reg_Click" FontFamily="Calibri" FontSize="20" TextBlock.FontSize="22" TextBlock.FontFamily="Calibri"/>
+                <Button Content="Зарегистрироваться"  Margin="0 20" Click="Button_Reg_Click" x:Name="regButton"/>
             </StackPanel>
         </Border>
     </Grid>

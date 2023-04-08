@@ -1,4 +1,4 @@
-﻿<Window x:Class="UserAPP.AuthWindow"
+﻿<Window x:Class="UserAPP.UserPageWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -12,7 +12,7 @@
      TextOptions.TextFormattingMode="Ideal"
      TextOptions.TextRenderingMode="Auto"
         UseLayoutRounding="True" 
-    Title="приложение для пользователей" Height="450" Width="800">
+    Title="приложение для пользователей" Height="350" Width="600">
     <!-- UseLayoutRounding округляет координаты элемента, что улучшает качество отображения-->
     <Grid Background="#ffdadada">
         <Border MinWidth="400" Margin="15" Background="White" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20">
@@ -21,18 +21,8 @@
                 <!-- Этот элемент создает тень -->
             </Border.Effect>
             <StackPanel>
-                <TextBlock Text="Авторизация" FontSize="22" FontWeight="Bold" Margin="0 0 0 20" FontFamily="Calibri"/>
-
-                <Grid Margin="0 0 0 20">
-                    <Button HorizontalAlignment="Left" Content="Регистрация" Click="Button_Reg_Click"/>
-                    <Button HorizontalAlignment="Right" Content="Войти" Style="{StaticResource MaterialDesignFlatButton}" />
-                </Grid>
-
-                <TextBox x:Name="textBoxLogin" materialDesign:HintAssist.Hint="Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Calibri" FontSize="20" TextBlock.FontSize="22" TextBlock.FontFamily="Calibri" />
-                <PasswordBox x:Name="passBox" materialDesign:HintAssist.Hint="Введите пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" FontFamily="Calibri" FontSize="20" TextBlock.FontSize="22" TextBlock.FontFamily="Calibri" />
-                
-                <!-- Подсказка-->
-                <Button Content="Войти в кабинет"  Margin="0 20" Click="Button_Auth_Click"/>
+                <TextBlock Text="Кабинет пользователя" FontSize="22" FontWeight="Bold" Margin="0 0 0 20" FontFamily="Calibri"/>
+                <ListView x:Name="listOfUsers" Margin="10"/>
             </StackPanel>
         </Border>
     </Grid>

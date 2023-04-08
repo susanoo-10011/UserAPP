@@ -53,10 +53,22 @@ namespace UserAPP
                     authUser = db.Users.Where(b => b.Login == login && b.Pass == pass).FirstOrDefault();
                 }
                 if (authUser != null)
+                {
                     MessageBox.Show("Все работает!");
+                    UserPageWindow userPageWindow = new UserPageWindow();
+                    userPageWindow.Show();
+                    Hide();
+                }
                 else MessageBox.Show("Такого пользователя не существует!");
 
             }
+        }
+
+        private void Button_Reg_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Hide();
         }
     }
 }
