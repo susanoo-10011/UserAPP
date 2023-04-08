@@ -14,6 +14,7 @@
         UseLayoutRounding="True" 
     Title="приложение для пользователей" Height="450" Width="800">
     <!-- UseLayoutRounding округляет координаты элемента, что улучшает качество отображения-->
+    
     <Grid Background="#ffdadada">
         <Border MinWidth="400" Margin="15" Background="White" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20">
             <Border.Effect>
@@ -32,7 +33,7 @@
                 <PasswordBox x:Name="passBox" materialDesign:HintAssist.Hint="Введите пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" FontFamily="Calibri" FontSize="20" TextBlock.FontSize="22" TextBlock.FontFamily="Calibri" />
                 
                 <!-- Подсказка-->
-                <Button Content="Войти в кабинет"  Margin="0 20" Click="Button_Auth_Click"/>
+                <Button Content="Войти в кабинет" x:Name="authButton"  Margin="0 20" Click="Button_Auth_Click"/>
             </StackPanel>
         </Border>
     </Grid>
